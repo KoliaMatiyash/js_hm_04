@@ -332,6 +332,9 @@ footer {
   margin: 25px 0;
   margin-right: 50px;
 }
+.add_item:hover {
+  cursor: pointer;
+}
 .buy {
   display: flex;
   flex-direction: row;
