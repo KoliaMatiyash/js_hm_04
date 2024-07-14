@@ -26,4 +26,6 @@ export const refs = {
     nav_brands: document.querySelector(".brands_text"),
     nav_contact: document.querySelector(".contact_text"),
   },
+  oreder_item: document.querySelector("#oreder_item1"),
+  addItem: document.querySelector("#addItem"),
 };

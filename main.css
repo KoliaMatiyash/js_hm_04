@@ -245,9 +245,6 @@ footer {
   padding-bottom: 30px;
 }
 
-.unactive {
-  display: none;
-}
 .block {
   overflow: hidden;
 }
@@ -285,6 +282,12 @@ footer {
 .oreder_item {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+}
+
+.oreder_item1 {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   margin-top: 19px;
   margin-bottom: 50px;
@@ -301,13 +304,14 @@ footer {
   font-weight: 700;
   font-family: Inter;
 }
-.order_item_count {
-  margin-left: 150px;
-}
+
 .order_item_count {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  align-items: center;
+  margin-left: 165px;
+  margin-right: 20px;
 }
 .count_item {
   font-size: 20px;
@@ -323,6 +327,10 @@ footer {
 }
 .plus:hover {
   cursor: pointer;
+}
+.add_item {
+  margin: 25px 0;
+  margin-right: 50px;
 }
 .buy {
   display: flex;
@@ -349,4 +357,7 @@ footer {
 .btn_buy:hover {
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.unactive {
+  display: none;
 }

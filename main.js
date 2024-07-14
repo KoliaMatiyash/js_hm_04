@@ -26,6 +26,8 @@ const {
     plus,
   },
   nav: { nav_brands, nav_contact, nav_who },
+  oreder_item,
+  addItem,
 } = refs;
 function language(lang) {
   main_baner_text.textContent = lang.main_baner_text;
@@ -69,6 +71,13 @@ let price = 23000;
 let totalPrice = price;
 count_item.textContent = count;
 item_price.textContent = totalPrice;
+addItem.addEventListener("click", () => {
+  addItem.classList.add("unactive");
+  oreder_item.classList.remove("unactive");
+  btn_buy.classList.remove("unactive");
+  count_item.textContent = 1;
+  item_price.textContent = 23000;
+});
 plus.addEventListener("click", () => {
   count++;
   totalPrice += price;
@@ -76,8 +85,15 @@ plus.addEventListener("click", () => {
   item_price.textContent = totalPrice;
 });
 minus.addEventListener("click", () => {
-  count--;
-  totalPrice -= price;
-  count_item.textContent = count;
-  item_price.textContent = totalPrice;
+  if (count > 0) {
+    count--;
+    totalPrice -= price;
+    count_item.textContent = count;
+    item_price.textContent = totalPrice;
+  }
+  if (count <= 0) {
+    oreder_item.classList.add("unactive");
+    btn_buy.classList.add("unactive");
+    addItem.classList.remove("unactive");
+  }
 });
